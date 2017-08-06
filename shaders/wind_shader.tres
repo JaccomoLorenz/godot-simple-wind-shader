@@ -1,0 +1,28 @@
+[gd_resource type="MaterialShader" format=1]
+
+[resource]
+
+_code = {
+"fragment": "uniform texture diffuse;
+
+DIFFUSE_ALPHA = tex(diffuse, UV);",
+"fragment_ofs": 0,
+"light": "",
+"light_ofs": 0,
+"vertex": "uniform float speed = 1.0;
+uniform float strength = 0.2;
+uniform float detail = 1.0;
+uniform vec2 direction = vec2(1.0, 0.0);
+uniform float heightOffset = 0.0;
+
+
+vec3 worldPos = WORLD_MATRIX * SRC_VERTEX;
+
+float time = TIME * speed + worldPos.x + worldPos.z;
+float wind = (sin(time) + cos(time * detail)) * strength * max(0.0, SRC_VERTEX.y - heightOffset);
+worldPos.xz += vec2(wind * direction.x, wind * direction.y);
+
+VERTEX = INV_CAMERA_MATRIX * worldPos;",
+"vertex_ofs": 0
+}
+
