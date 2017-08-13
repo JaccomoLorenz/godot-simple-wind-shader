@@ -49,10 +49,3 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 -- Godot Engine <https://godotengine.org>"
-
-
------------
-
-The Godot logo contained into the icon.png file is not my creation, and is protected by its own license that is available on https:// github.com/godotengine/godot/blob/master/LOGO_LICENSE.md:
-
-"Godot Logo (C) Andrea Calabró Distributed under the terms of the Creative Commons Attribution License version 3.0 (CC-BY 3.0) https://creativecommons.org/licenses/by/3.0/legalcode."
