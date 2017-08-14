@@ -1,11 +1,12 @@
 # Simple Wind Shader
 
-A simlpe shader for the godot engine (version 2.1) that gives objects a wiggle/wind effect.
+A simlpe shader for the godot engine version 2.1 (3.0 planned) that gives objects like grass or plants a wiggle/wind effect. 
 
 
 ## Demo
 
 There is a demo scene "demo.tscn" where you can test the shader and play with the shader parameters.
+If you don't need the demo install only the shader folder or its content (follow the instructions below).
 
 Video: https://www.youtube.com/watch?v=3MrdB-qcXAg
 
@@ -17,7 +18,7 @@ F1 to show/hide the frames/second.
 
 ## How to use the shader
 
-1. Copy the shader folder or at least it's content somewhere into your project folder (See license details).
+1. Copy the shader folder or at least its content somewhere into your project folder (See license details).
 2. Then open/select a mesh in godot and give the object a new ShaderMaterial if it haven't one.
 (Make sure that the mesh origion is on the right position see below: Shader parameters -> Height Offset ).
 3. Now go into the material settings and load one of the shaders that you have copied to your project folder. 
