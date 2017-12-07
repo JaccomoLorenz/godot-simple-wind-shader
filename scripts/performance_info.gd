@@ -12,13 +12,15 @@ var res_lbl = Label.new()
 func _input(event):
 	if event.is_action_pressed("ui_f1"):
 		if is_processing():
-			set_process(true)
-		else:
 			set_process(false)
+			container.hide()
+		else:
+			set_process(true)
+			container.show()
 
 func _ready():
 	add_child(container)
-	
+
 	container.add_child(fps_lbl)
 	container.add_child(time_lbl)
 	container.add_child(object_lbl)
@@ -26,10 +28,10 @@ func _ready():
 	container.add_child(v_memory_lbl)
 	container.add_child(draws_lbl)
 	container.add_child(res_lbl)
-	
+
 	set_process_input(true)
 	set_process(true)
-	
+
 func _process(delta):
 		fps_lbl.set_text("FPS: %s" % Performance.get_monitor(Performance.TIME_FPS))
 		time_lbl.set_text("Process Time: %s" % Performance.get_monitor(Performance.TIME_PROCESS))
