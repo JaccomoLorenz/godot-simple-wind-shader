@@ -2,7 +2,7 @@
 
 A simlpe shader for the godot engine version 3 (Beta/Daily Build) that gives objects like grass or plants a wiggle/wind effect.
 
-Video: https://www.youtube.com/watch?v=3MrdB-qcXAg
+Video: TODO
 
 ## Demo
 
