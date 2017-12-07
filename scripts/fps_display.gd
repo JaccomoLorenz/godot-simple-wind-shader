@@ -1,27 +1,40 @@
-extends Node2D
+extends Node
 
-var lbl_01 = Label.new()
-var display = true
-
-var r = Rect2( Vector2(200,300), Vector2(50,30) )
+var container = VBoxContainer.new()
+var fps_lbl = Label.new()
+var time_lbl = Label.new()
+var object_lbl = Label.new()
+var vertics_lbl = Label.new()
+var v_memory_lbl = Label.new()
+var draws_lbl = Label.new()
+var res_lbl = Label.new()
 
 func _input(event):
 	if event.is_action_pressed("ui_f1"):
-		if display:
-			display = false
+		if is_processing():
+			set_process(true)
 		else:
-			display = true
+			set_process(false)
 
 func _ready():
-	add_child(lbl_01)
+	add_child(container)
 	
-	lbl_01.set_margin(MARGIN_LEFT,10)
-	lbl_01.set_size(Vector2(20,70))
-	lbl_01.set_pos(Vector2(0,0))
+	container.add_child(fps_lbl)
+	container.add_child(time_lbl)
+	container.add_child(object_lbl)
+	container.add_child(vertics_lbl)
+	container.add_child(v_memory_lbl)
+	container.add_child(draws_lbl)
+	container.add_child(res_lbl)
 	
 	set_process_input(true)
 	set_process(true)
 	
 func _process(delta):
-	if display:
-		lbl_01.set_text("FPS: " + str(OS.get_frames_per_second()))
+		fps_lbl.set_text("FPS: %s" % Performance.get_monitor(Performance.TIME_FPS))
+		time_lbl.set_text("Process Time: %s" % Performance.get_monitor(Performance.TIME_PROCESS))
+		object_lbl.set_text("Objects: %s" % Performance.get_monitor(Performance.RENDER_OBJECTS_IN_FRAME))
+		vertics_lbl.set_text("Vertics: %s" % Performance.get_monitor(Performance.RENDER_VERTICES_IN_FRAME))
+		v_memory_lbl.set_text("Video Memory: %s" % Performance.get_monitor(Performance.RENDER_VIDEO_MEM_USED))
+		draws_lbl.set_text("Draw Calls: %s" % Performance.get_monitor(Performance.RENDER_DRAW_CALLS_IN_FRAME))
+		draws_lbl.set_text("Resolution: %s" % get_viewport().size)
