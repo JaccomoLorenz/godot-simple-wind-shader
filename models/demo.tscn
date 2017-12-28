@@ -107,8 +107,9 @@ adjustment_saturation = 1.0
 
 [node name="Camera" type="Camera" parent="." index="0"]
 
-transform = Transform( 0.733626, -0.176644, 0.656193, 0, 0.965624, 0.259942, -0.679553, -0.1907, 0.708407, 2.32198, 1.87858, 2.26114 )
-keep_aspect = 1
+transform = Transform( 0.733626, -0.176644, 0.656193, 0, 0.965624, 0.259942, -0.679553, -0.1907, 0.708407, 2.71105, 1.87858, 2.71591 )
+keep_aspect = 0
+vaspect = false
 cull_mask = 1048575
 environment = null
 h_offset = 0.0

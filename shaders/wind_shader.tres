@@ -16,7 +16,8 @@ void vertex(){
 
 	float time = TIME * speed + worldPos.x + worldPos.z;
 	float wind = (sin(time) + cos(time * detail)) * strength * max(0.0, VERTEX.y - heightOffset);
-	worldPos.xz += vec2(wind * direction.x, wind * direction.y);
+	vec2 dir = normalize(direction);
+	worldPos.xz += vec2(wind * dir.x, wind * dir.y);
 	VERTEX = (INV_CAMERA_MATRIX * worldPos).xyz;
 	NORMAL = (MODELVIEW_MATRIX * vec4(NORMAL, 0.0)).xyz;
 }
