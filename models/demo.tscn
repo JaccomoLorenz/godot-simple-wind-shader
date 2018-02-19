@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scripts/performance_info.gd" type="Script" id=1]
+[ext_resource path="res://scripts/camera_control.gd" type="Script" id=1]
 [ext_resource path="res://models/ground.tscn" type="PackedScene" id=2]
 [ext_resource path="res://models/grass.tscn" type="PackedScene" id=3]
 
@@ -107,9 +107,8 @@ adjustment_saturation = 1.0
 
 [node name="Camera" type="Camera" parent="." index="0"]
 
-transform = Transform( 0.733626, -0.176644, 0.656193, 0, 0.965624, 0.259942, -0.679553, -0.1907, 0.708407, 2.71105, 1.87858, 2.71591 )
+transform = Transform( 0.801174, 0.155557, -0.57786, 0, 0.965624, 0.259942, 0.598431, -0.208258, 0.773633, -2.2314, 2.20907, 2.71591 )
 keep_aspect = 1
-vaspect = true
 cull_mask = 1048575
 environment = null
 h_offset = 0.0
@@ -122,6 +121,25 @@ size = 1.0
 near = 0.1
 far = 100.0
 script = ExtResource( 1 )
+enabled = true
+mouse_mode = 2
+mouselook = true
+sensitivity = 0.5
+smoothness = 0.8
+privot = null
+distance = 5.0
+rotate_privot = false
+collisions = false
+yaw_limit = 360
+pitch_limit = 360
+movement = true
+speed = 1.0
+forward_action = "ui_up"
+backward_action = "ui_down"
+left_action = "ui_left"
+right_action = "ui_right"
+use_gui = true
+gui_action = "ui_cancel"
 
 [node name="Ground" parent="." index="1" instance=ExtResource( 2 )]
 
@@ -132,6 +150,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12367, 0.875, -0.0240485 )
 [node name="grass" parent="Grass" index="0"]
 
 _sections_unfolded = [ "Geometry", "Transform", "material" ]
+
+[node name="AnimationPlayer" parent="Grass" index="1"]
+
+playback_speed = 1.0
 
 [node name="Grass15" parent="." index="3" instance=ExtResource( 3 )]
 
@@ -349,6 +371,10 @@ transform = Transform( -0.0191467, 0, 0.999817, 0, 1, 0, -0.999817, 0, -0.019146
 
 editor/display_folded = true
 transform = Transform( 0.999994, 0, -0.00360146, 0, 1, 0, 0.00360146, 0, 0.999994, 0.854644, 0.847243, 1.27869 )
+
+[node name="AnimationPlayer" parent="Grass39" index="1"]
+
+playback_speed = 1.0
 
 [node name="Grass50" parent="." index="57" instance=ExtResource( 3 )]
 
