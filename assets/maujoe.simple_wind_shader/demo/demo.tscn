@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scripts/camera_control.gd" type="Script" id=1]
-[ext_resource path="res://models/ground.tscn" type="PackedScene" id=2]
-[ext_resource path="res://models/grass.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/maujoe.simple_wind_shader/demo/scripts/camera_control.gd" type="Script" id=1]
+[ext_resource path="res://assets/maujoe.simple_wind_shader/demo/models/ground.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/maujoe.simple_wind_shader/demo/models/grass.tscn" type="PackedScene" id=3]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -150,10 +150,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12367, 0.875, -0.0240485 )
 [node name="grass" parent="Grass" index="0"]
 
 _sections_unfolded = [ "Geometry", "Transform", "material" ]
-
-[node name="AnimationPlayer" parent="Grass" index="1"]
-
-playback_speed = 1.0
 
 [node name="Grass15" parent="." index="3" instance=ExtResource( 3 )]
 
@@ -371,10 +367,6 @@ transform = Transform( -0.0191467, 0, 0.999817, 0, 1, 0, -0.999817, 0, -0.019146
 
 editor/display_folded = true
 transform = Transform( 0.999994, 0, -0.00360146, 0, 1, 0, 0.00360146, 0, 0.999994, 0.854644, 0.847243, 1.27869 )
-
-[node name="AnimationPlayer" parent="Grass39" index="1"]
-
-playback_speed = 1.0
 
 [node name="Grass50" parent="." index="57" instance=ExtResource( 3 )]
 

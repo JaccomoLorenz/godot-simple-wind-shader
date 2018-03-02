@@ -1,8 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://models/grass.dae" type="PackedScene" id=1]
-[ext_resource path="res://shaders/wind_shader.tres" type="Shader" id=2]
-[ext_resource path="res://textures/grass.png" type="Texture" id=3]
+[ext_resource path="res://assets/maujoe.simple_wind_shader/demo/models/grass.dae" type="PackedScene" id=1]
+[ext_resource path="res://assets/maujoe.simple_wind_shader/shaders/wind_shader.tres" type="Shader" id=2]
+[ext_resource path="res://assets/maujoe.simple_wind_shader/demo/textures/grass.png" type="Texture" id=3]
+
 
 [sub_resource type="ShaderMaterial" id=2]
 

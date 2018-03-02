@@ -2,16 +2,21 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/ground.dae-1d154dfa9e0030c67c446f6bc6b04f5c.scn"
+path="res://.import/ground.dae-e7eade3f20b36e192e4beacf3b6f5825.scn"
 
 [deps]
 
+source_file="res://assets/maujoe.simple_wind_shader/demo/models/ground.dae"
 source_md5="7f7dcd52f0fb767cb34a62e774bdd2b4"
+
+dest_files=[ "res://.import/ground.dae-e7eade3f20b36e192e4beacf3b6f5825.scn" ]
+dest_md5="96c11e59c05f9fb4b20f9cd0d68eccdc"
 
 [params]
 
 nodes/root_type="Spatial"
 nodes/root_name="Scene Root"
+nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
 materials/location=1
@@ -21,11 +26,13 @@ meshes/compress=true
 meshes/ensure_tangents=true
 meshes/storage=0
 meshes/light_baking=0
+meshes/lightmap_texel_size=0.1
 external_files/store_in_subdir=false
 animation/import=true
 animation/fps=15
 animation/filter_script=""
 animation/storage=false
+animation/keep_custom_tracks=false
 animation/optimizer/enabled=true
 animation/optimizer/max_linear_error=0.05
 animation/optimizer/max_angular_error=0.01

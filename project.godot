@@ -10,9 +10,9 @@ config_version=3
 
 [application]
 
-config/name="godot-simple-wind-shader_3pre"
-run/main_scene="res://models/demo.tscn"
-config/icon="res://icon.png"
+config/name="Simple Wind Shader"
+run/main_scene="res://assets/maujoe.simple_wind_shader/demo/demo.tscn"
+config/icon="res://assets/maujoe.simple_wind_shader/icon.png"
 
 [gdnative]
 
@@ -25,4 +25,4 @@ ui_f1=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"",
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://assets/maujoe.simple_wind_shader/demo/default_env.tres"

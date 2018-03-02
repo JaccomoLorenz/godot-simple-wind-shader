@@ -2,11 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/preview.png-b4838d23de224c84c7c9b5588b6708a6.stex"
+path="res://.import/editor_settings.png-4b2956560fdb3aaf17d1de0ca812f9b6.stex"
 
 [deps]
 
-source_md5="50d4d00269f3b6d747d389da5397ad90"
+source_file="res://assets/maujoe.simple_wind_shader/editor_settings.png"
+source_md5="ac8158a9e8a1f118f7c79b669426985a"
+
+dest_files=[ "res://.import/editor_settings.png-4b2956560fdb3aaf17d1de0ca812f9b6.stex" ]
+dest_md5="ccf082298e7b8b68e9054fadecd45e12"
 
 [params]
 

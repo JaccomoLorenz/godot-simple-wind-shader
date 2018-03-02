@@ -25,7 +25,7 @@ If you don't need the demo just ignore the demo folder and connect your mesh wit
 - vec2 direction - The direction of wind movement.
 - float heightOffset - The height where the wind begins to move. By default 0.0, so everything over the object origin will have wind. (Make sure that you position the object on the right height or adapt it with this setting!)
 
-![Image](assets/maujoe.simple_wind_shader/editor_settings.png)
+![Image](editor_settings.png)
 
 ## License
 
