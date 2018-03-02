@@ -1,7 +1,7 @@
 
 All parts of this project that are not copyrighted or licensed by someone else are released under the MIT License:
 
-Copyright (c) 2017-2018 Jaccomo Lorenz (Maujoe)
+Copyright (c) 2018 Jaccomo Lorenz (Maujoe)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

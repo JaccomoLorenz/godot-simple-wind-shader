@@ -1,0 +1,419 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/camera_control.gd" type="Script" id=1]
+[ext_resource path="res://models/ground.tscn" type="PackedScene" id=2]
+[ext_resource path="res://models/grass.tscn" type="PackedScene" id=3]
+
+[node name="Node" type="Node"]
+
+[node name="Camera" type="Camera" parent="."]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.14872, 4.24088 )
+projection = 0
+fov = 65.0
+near = 0.1
+far = 100.0
+keep_aspect = 1
+current = false
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler/tracking = 0
+script = ExtResource( 1 )
+
+[node name="Ground" parent="." instance=ExtResource( 2 )]
+
+[node name="Grass" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12367, 0.875, -0.0240485 )
+
+[node name="Grass15" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12367, 0.875, -0.835992 )
+
+[node name="Grass88" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.989712, 0, -0.143074, 0, 1, 0, 0.143074, 0, 0.989712, -0.12952, 0.875, -1.22231 )
+
+[node name="Grass33" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12367, 0.875, 0.668754 )
+
+[node name="Grass44" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.0227474, 0, -0.999741, 0, 1, 0, 0.999741, 0, -0.0227474, 1.28645, 0.847243, 0.628147 )
+
+[node name="Grass57" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.0227474, 0, -0.999741, 0, 1, 0, 0.999741, 0, -0.0227474, 1.28645, 0.847243, -0.717221 )
+
+[node name="Grass70" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.0227474, 0, -0.999741, 0, 1, 0, 0.999741, 0, -0.0227474, -0.633197, 0.847243, -0.717221 )
+
+[node name="Grass74" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.0227474, 0, -0.999741, 0, 1, 0, 0.999741, 0, -0.0227474, -0.633197, 0.847243, 0.592967 )
+
+[node name="Grass2" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.749072, 0, -0.662488, 0, 1, 0, 0.662488, 0, 0.749072, 0.164123, 0.875, -0.0240485 )
+
+[node name="Grass23" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.749072, 0, -0.662488, 0, 1, 0, 0.662488, 0, 0.749072, 0.164123, 0.875, -0.835992 )
+
+[node name="Grass86" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.646581, 0, -0.762845, 0, 1, 0, 0.762845, 0, 0.646581, 0.155312, 0.875, -1.18114 )
+
+[node name="Grass25" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.749072, 0, -0.662488, 0, 1, 0, 0.662488, 0, 0.749072, 0.164123, 0.875, 0.668754 )
+
+[node name="Grass48" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.679356, 0, -0.733809, 0, 1, 0, 0.733809, 0, -0.679356, 1.27991, 0.847243, 0.915866 )
+
+[node name="Grass60" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.679356, 0, -0.733809, 0, 1, 0, 0.733809, 0, -0.679356, 1.27991, 0.847243, -0.429503 )
+
+[node name="Grass72" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.679356, 0, -0.733809, 0, 1, 0, 0.733809, 0, -0.679356, -0.639743, 0.847243, -0.429503 )
+
+[node name="Grass76" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.679356, 0, -0.733809, 0, 1, 0, 0.733809, 0, -0.679356, -0.639743, 0.847243, 0.880685 )
+
+[node name="Grass3" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.749072, 0, -0.662488, 0, 1, 0, 0.662488, 0, 0.749072, 0.164123, 0.875, 0.341884 )
+
+[node name="Grass22" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.749072, 0, -0.662488, 0, 1, 0, 0.662488, 0, 0.749072, 0.164123, 0.875, -0.470059 )
+
+[node name="Grass30" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.749072, 0, -0.662488, 0, 1, 0, 0.662488, 0, 0.749072, 0.164123, 0.875, 1.03469 )
+
+[node name="Grass41" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.679356, 0, -0.733809, 0, 1, 0, 0.733809, 0, -0.679356, 0.914069, 0.847243, 0.907542 )
+
+[node name="Grass53" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.679356, 0, -0.733809, 0, 1, 0, 0.733809, 0, -0.679356, 0.914069, 0.847243, -0.437827 )
+
+[node name="Grass66" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.679356, 0, -0.733809, 0, 1, 0, 0.733809, 0, -0.679356, -1.00558, 0.847243, -0.437827 )
+
+[node name="Grass81" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.679356, 0, -0.733809, 0, 1, 0, 0.733809, 0, -0.679356, -1.00558, 0.847243, 0.872361 )
+
+[node name="Grass4" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.999993, 0, -0.00363281, 0, 1, 0, 0.00363281, 0, 0.999993, -0.251788, 0.875, 0.341884 )
+
+[node name="Grass16" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.999993, 0, -0.00363281, 0, 1, 0, 0.00363281, 0, 0.999993, -0.251788, 0.875, -0.470059 )
+
+[node name="Grass36" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.999993, 0, -0.00363281, 0, 1, 0, 0.00363281, 0, 0.999993, -0.251788, 0.875, 1.03469 )
+
+[node name="Grass47" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.0263791, 0, -0.999652, 0, 1, 0, 0.999652, 0, -0.0263791, 0.92353, 0.847243, 0.491738 )
+
+[node name="Grass59" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.0263791, 0, -0.999652, 0, 1, 0, 0.999652, 0, -0.0263791, 0.92353, 0.847243, -0.853631 )
+
+[node name="Grass71" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.0263791, 0, -0.999652, 0, 1, 0, 0.999652, 0, -0.0263791, -0.99612, 0.847243, -0.853631 )
+
+[node name="Grass75" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.0263791, 0, -0.999652, 0, 1, 0, 0.999652, 0, -0.0263791, -0.99612, 0.847243, 0.456558 )
+
+[node name="Grass5" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.45864, 0, -0.888622, 0, 1, 0, 0.888622, 0, -0.45864, -0.680027, 0.875, 0.112206 )
+
+[node name="Grass24" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.45864, 0, -0.888622, 0, 1, 0, 0.888622, 0, -0.45864, -0.680027, 0.875, -0.699737 )
+
+[node name="Grass26" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.45864, 0, -0.888622, 0, 1, 0, 0.888622, 0, -0.45864, -0.680027, 0.875, 0.805009 )
+
+[node name="Grass37" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.877959, 0, 0.478735, 0, 1, 0, -0.478735, 0, -0.877959, 1.16289, 0.847243, 0.0688347 )
+
+[node name="Grass51" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.877959, 0, 0.478735, 0, 1, 0, -0.478735, 0, -0.877959, 1.16289, 0.847243, -1.27653 )
+
+[node name="Grass64" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.877959, 0, 0.478735, 0, 1, 0, -0.478735, 0, -0.877959, -0.75676, 0.847243, -1.27653 )
+
+[node name="Grass79" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.877959, 0, 0.478735, 0, 1, 0, -0.478735, 0, -0.877959, -0.75676, 0.847243, 0.0336542 )
+
+[node name="Grass6" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.833195, 0, -0.552979, 0, 1, 0, 0.552979, 0, 0.833195, -0.602322, 0.875, 0.452692 )
+
+[node name="Grass20" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.833195, 0, -0.552979, 0, 1, 0, 0.552979, 0, 0.833195, -0.602322, 0.875, -0.359251 )
+
+[node name="Grass29" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.833195, 0, -0.552979, 0, 1, 0, 0.552979, 0, 0.833195, -0.602322, 0.875, 1.14549 )
+
+[node name="Grass40" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.571789, 0, -0.820401, 0, 1, 0, 0.820401, 0, -0.571789, 0.820724, 0.847243, 0.138775 )
+
+[node name="Grass52" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.571789, 0, -0.820401, 0, 1, 0, 0.820401, 0, -0.571789, 0.820724, 0.847243, -1.20659 )
+
+[node name="Grass65" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.571789, 0, -0.820401, 0, 1, 0, 0.820401, 0, -0.571789, -1.09893, 0.847243, -1.20659 )
+
+[node name="Grass80" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.571789, 0, -0.820401, 0, 1, 0, 0.820401, 0, -0.571789, -1.09893, 0.847243, 0.103595 )
+
+[node name="Grass7" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.890786, 0, 0.454423, 0, 1, 0, -0.454423, 0, 0.890786, 0.536528, 0.875, 0.0951686 )
+
+[node name="Grass21" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.890786, 0, 0.454423, 0, 1, 0, -0.454423, 0, 0.890786, 0.536528, 0.875, -0.716775 )
+
+[node name="Grass31" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.890786, 0, 0.454423, 0, 1, 0, -0.454423, 0, 0.890786, 0.536528, 0.875, 0.787971 )
+
+[node name="Grass42" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.434043, 0, -0.900892, 0, 1, 0, 0.900892, 0, 0.434043, 1.15225, 0.847243, 1.28546 )
+
+[node name="Grass54" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.434043, 0, -0.900892, 0, 1, 0, 0.900892, 0, 0.434043, 1.15225, 0.847243, -0.0599058 )
+
+[node name="Grass67" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.434043, 0, -0.900892, 0, 1, 0, 0.900892, 0, 0.434043, -0.767401, 0.847243, -0.0599058 )
+
+[node name="Grass82" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.434043, 0, -0.900892, 0, 1, 0, 0.900892, 0, 0.434043, -0.767401, 0.847243, 1.25028 )
+
+[node name="Grass8" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.0191467, 0, 0.999817, 0, 1, 0, -0.999817, 0, -0.0191467, 0.536528, 0.875, 0.392851 )
+
+[node name="Grass19" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.0191467, 0, 0.999817, 0, 1, 0, -0.999817, 0, -0.0191467, 0.536528, 0.875, -0.419092 )
+
+[node name="Grass28" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.0191467, 0, 0.999817, 0, 1, 0, -0.999817, 0, -0.0191467, 0.536528, 0.875, 1.08565 )
+
+[node name="Grass39" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.999994, 0, -0.00360146, 0, 1, 0, 0.00360146, 0, 0.999994, 0.854644, 0.847243, 1.27869 )
+
+[node name="Grass50" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.999994, 0, -0.00360146, 0, 1, 0, 0.00360146, 0, 0.999994, 0.854644, 0.847243, -0.0666772 )
+
+[node name="Grass63" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.999994, 0, -0.00360146, 0, 1, 0, 0.00360146, 0, 0.999994, -1.06501, 0.847243, -0.0666772 )
+
+[node name="Grass78" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.999994, 0, -0.00360146, 0, 1, 0, 0.00360146, 0, 0.999994, -1.06501, 0.847243, 1.24351 )
+
+[node name="Grass85" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.857728, 0, 0.514104, 0, 1, 0, -0.514104, 0, 0.857728, -1.24814, 0.847243, 1.33444 )
+
+[node name="Grass9" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.987512, 0, 0.157542, 0, 1, 0, -0.157542, 0, 0.987512, 0.300199, 0.875, 0.593725 )
+
+[node name="Grass17" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.987512, 0, 0.157542, 0, 1, 0, -0.157542, 0, 0.987512, 0.300199, 0.875, -0.218218 )
+
+[node name="Grass35" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.987512, 0, 0.157542, 0, 1, 0, -0.157542, 0, 0.987512, 0.300199, 0.875, 1.28653 )
+
+[node name="Grass46" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.135037, 0, -0.990841, 0, 1, 0, 0.990841, 0, 0.135037, 0.659198, 0.847243, 1.03785 )
+
+[node name="Grass58" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.135037, 0, -0.990841, 0, 1, 0, 0.990841, 0, 0.135037, 0.659198, 0.847243, -0.307514 )
+
+[node name="Grass62" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.135037, 0, -0.990841, 0, 1, 0, 0.990841, 0, 0.135037, -1.26045, 0.847243, -0.307514 )
+
+[node name="Grass77" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.135037, 0, -0.990841, 0, 1, 0, 0.990841, 0, 0.135037, -1.26045, 0.847243, 1.00267 )
+
+[node name="Grass10" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.848084, 0, -0.529862, 0, 1, 0, 0.529862, 0, 0.848084, -0.418099, 0.875, 0.0515285 )
+
+[node name="Grass18" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.848084, 0, -0.529862, 0, 1, 0, 0.529862, 0, 0.848084, -0.418099, 0.875, -0.760415 )
+
+[node name="Grass87" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.763549, 0, -0.64575, 0, 1, 0, 0.64575, 0, 0.763549, -0.431732, 0.875, -1.18964 )
+
+[node name="Grass27" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.848084, 0, -0.529862, 0, 1, 0, 0.529862, 0, 0.848084, -0.418099, 0.875, 0.744331 )
+
+[node name="Grass38" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.549017, 0, -0.835812, 0, 1, 0, 0.835812, 0, -0.549017, 1.21759, 0.847243, 0.332076 )
+
+[node name="Grass49" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.549017, 0, -0.835812, 0, 1, 0, 0.835812, 0, -0.549017, 1.21759, 0.847243, -1.01329 )
+
+[node name="Grass61" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.549017, 0, -0.835812, 0, 1, 0, 0.835812, 0, -0.549017, -0.702057, 0.847243, -1.01329 )
+
+[node name="Grass73" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.549017, 0, -0.835812, 0, 1, 0, 0.835812, 0, -0.549017, -0.702057, 0.847243, 0.296895 )
+
+[node name="Grass11" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.0169177, 0, -0.999857, 0, 1, 0, 0.999857, 0, 0.0169177, -0.418099, 0.875, 0.636099 )
+
+[node name="Grass14" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.0169177, 0, -0.999857, 0, 1, 0, 0.999857, 0, 0.0169177, -0.418099, 0.875, -0.175844 )
+
+[node name="Grass34" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.0169177, 0, -0.999857, 0, 1, 0, 0.999857, 0, 0.0169177, -0.418099, 0.875, 1.3289 )
+
+[node name="Grass45" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.999983, 0, 0.00583077, 0, 1, 0, -0.00583077, 0, -0.999983, 0.633174, 0.847243, 0.318778 )
+
+[node name="Grass55" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.999983, 0, 0.00583077, 0, 1, 0, -0.00583077, 0, -0.999983, 0.633174, 0.847243, -1.02659 )
+
+[node name="Grass89" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.988861, 0, 0.148842, 0, 1, 0, -0.148842, 0, -0.988861, 0.646808, 0.847243, -1.28064 )
+
+[node name="Grass90" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.852575, 0, -0.522606, 0, 1, 0, 0.522606, 0, -0.852575, 0.319572, 0.847243, -1.33997 )
+
+[node name="Grass91" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.687675, 0, -0.726019, 0, 1, 0, 0.726019, 0, -0.687675, -1.29768, 0.847243, -1.31829 )
+
+[node name="Grass68" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.999983, 0, 0.00583077, 0, 1, 0, -0.00583077, 0, -0.999983, -1.28648, 0.847243, -1.02659 )
+
+[node name="Grass84" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.999983, 0, 0.00583077, 0, 1, 0, -0.00583077, 0, -0.999983, -1.28648, 0.847243, 0.283598 )
+
+[node name="Grass12" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.585717, 0, -0.810516, 0, 1, 0, 0.810516, 0, 0.585717, -0.0556628, 0.875, 0.636099 )
+
+[node name="Grass13" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.585717, 0, -0.810516, 0, 1, 0, 0.810516, 0, 0.585717, -0.0556628, 0.875, -0.175844 )
+
+[node name="Grass32" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( 0.585717, 0, -0.810516, 0, 1, 0, 0.810516, 0, 0.585717, -0.0556628, 0.875, 1.3289 )
+
+[node name="Grass43" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.82363, 0, -0.567128, 0, 1, 0, 0.567128, 0, -0.82363, 0.62493, 0.847243, 0.68112 )
+
+[node name="Grass56" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.82363, 0, -0.567128, 0, 1, 0, 0.567128, 0, -0.82363, 0.62493, 0.847243, -0.664248 )
+
+[node name="Grass69" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.82363, 0, -0.567128, 0, 1, 0, 0.567128, 0, -0.82363, -1.29472, 0.847243, -0.664248 )
+
+[node name="Grass83" parent="." instance=ExtResource( 3 )]
+
+transform = Transform( -0.82363, 0, -0.567128, 0, 1, 0, 0.567128, 0, -0.82363, -1.29472, 0.847243, 0.64594 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+
+transform = Transform( 1, 0, 0, 0, 0.965515, 0.260346, 0, -0.260346, 0.965515, 0, 4.42044, 3.50781 )
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 1.0
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_cull_mask = -1
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.1
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+directional_shadow_mode = 1
+directional_shadow_split_1 = 0.1
+directional_shadow_split_2 = 0.2
+directional_shadow_split_3 = 0.5
+directional_shadow_blend_splits = false
+directional_shadow_normal_bias = 0.8
+directional_shadow_bias_split_scale = 0.25
+directional_shadow_depth_range = 0
+directional_shadow_max_distance = 200.0
+
+
+[editable path="Grass"]
+[editable path="Grass39"]

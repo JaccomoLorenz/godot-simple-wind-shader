@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/maujoe.simple_wind_shader/demo/models/grass.dae" type="PackedScene" id=1]
+[ext_resource path="res://assets/maujoe.simple_wind_shader/shaders/wind_shader.tres" type="Shader" id=2]
+[ext_resource path="res://assets/maujoe.simple_wind_shader/demo/textures/grass.png" type="Texture" id=3]
+
+
+[sub_resource type="ShaderMaterial" id=2]
+
+render_priority = 0
+shader = ExtResource( 2 )
+shader_param/albedo = Color( 1, 1, 1, 1 )
+shader_param/specular = 0.0
+shader_param/metallic = 0.0
+shader_param/roughness = 1.0
+shader_param/point_size = 1.0
+shader_param/metallic_texture_channel = Plane( 1, 0, 0, 0 )
+shader_param/roughness_texture_channel = Plane( 1, 0, 0, 0 )
+shader_param/speed = 1.0
+shader_param/strength = 0.08
+shader_param/detail = 3.0
+shader_param/direction = Vector2( 1, 0 )
+shader_param/heightOffset = null
+shader_param/uv1_scale = Vector3( 1, 1, 1 )
+shader_param/uv1_offset = Vector3( 0, 0, 0 )
+shader_param/uv2_scale = Vector3( 1, 1, 1 )
+shader_param/uv2_offset = Vector3( 0, 0, 0 )
+shader_param/texture_albedo = ExtResource( 3 )
+_sections_unfolded = [ "shader_param" ]
+
+[node name="Grass" index="0" instance=ExtResource( 1 )]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="grass" parent="." index="0"]
+
+material_override = SubResource( 2 )
+_sections_unfolded = [ "Geometry", "Transform" ]
+
+
