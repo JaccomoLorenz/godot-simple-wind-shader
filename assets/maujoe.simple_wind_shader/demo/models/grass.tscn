@@ -24,6 +24,7 @@ shader_param/minStrength = 0.02
 shader_param/maxStrength = 0.2
 shader_param/interval = 0.3
 shader_param/detail = 5.0
+shader_param/distortion = 1.0
 shader_param/direction = Vector2( 1, 0 )
 shader_param/heightOffset = null
 shader_param/texture_albedo = ExtResource( 3 )

@@ -26,13 +26,15 @@ uniform float minStrength : hint_range(0.0, 1.0);
 uniform float maxStrength : hint_range(0.0, 1.0);
 uniform float interval = 0.25;
 uniform float detail = 1.0;
+uniform float distortion;
 uniform vec2 direction = vec2(1.0, 0.0);
 uniform float heightOffset = 0.0;
 
 void vertex() {
 	vec4 worldPos = WORLD_MATRIX * vec4(VERTEX, 1.0);
+	vec4 pos = WORLD_MATRIX * mix(vec4(1.0), vec4(VERTEX, 1.0), distortion);
 
-	float time = TIME * speed + worldPos.x + worldPos.z;
+	float time = TIME * speed + pos.x + pos.z;
 	float diff = pow(maxStrength-minStrength, 2);
 	float strength = clamp(minStrength+ diff + sin(time * interval) * diff, minStrength, maxStrength);
 	float wind = (sin(time) + cos(time * detail)) * strength * max(0.0, VERTEX.y - heightOffset);
