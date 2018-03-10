@@ -365,8 +365,11 @@ transform = Transform( -0.0191467, 0, 0.999817, 0, 1, 0, -0.999817, 0, -0.019146
 
 [node name="Grass39" parent="." index="56" instance=ExtResource( 3 )]
 
-editor/display_folded = true
 transform = Transform( 0.999994, 0, -0.00360146, 0, 1, 0, 0.00360146, 0, 0.999994, 0.854644, 0.847243, 1.27869 )
+
+[node name="grass" parent="Grass39" index="0"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.07219e-08 )
 
 [node name="Grass50" parent="." index="57" instance=ExtResource( 3 )]
 
