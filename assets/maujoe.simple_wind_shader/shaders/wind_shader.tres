@@ -24,35 +24,39 @@ uniform vec3 uv2_offset;
 uniform float speed = 1.0;
 uniform float minStrength : hint_range(0.0, 1.0);
 uniform float maxStrength : hint_range(0.0, 1.0);
-uniform float interval = 0.25;
+uniform float interval = 0.75;
 uniform float detail = 1.0;
 uniform float distortion;
 uniform vec2 direction = vec2(1.0, 0.0);
 uniform float heightOffset = 0.0;
 
-void vertex() {
-	vec4 worldPos = WORLD_MATRIX * vec4(VERTEX, 1.0);
-	vec4 pos = WORLD_MATRIX * mix(vec4(1.0), vec4(VERTEX, 1.0), distortion);
 
-	float time = TIME * speed + pos.x + pos.z;
-	float diff = pow(maxStrength-minStrength, 2);
-	float strength = clamp(minStrength+ diff + sin(time * interval) * diff, minStrength, maxStrength);
-	float wind = (sin(time) + cos(time * detail)) * strength * max(0.0, VERTEX.y - heightOffset);
+vec3 getWind(mat4 worldMatrix, vec3 vertex, float timer){
+	vec4 pos = worldMatrix * mix(vec4(1.0), vec4(vertex, 1.0), distortion);
+	float time = timer * speed + pos.x + pos.z;
+	float diff = pow(maxStrength - minStrength, 2);
+	float strength = clamp(minStrength + diff + sin(time * (1.0 - interval)) * diff, minStrength, maxStrength);
+	float wind = (sin(time) + cos(time * detail)) * strength * max(0.0, vertex.y - heightOffset);
 	vec2 dir = normalize(direction);
 	
-	worldPos.xz += vec2(wind * dir.x, wind * dir.y);
+	return vec3(wind * dir.x, 0.0, wind * dir.y);
+	}
+
+void vertex() {
+	vec4 worldPos = WORLD_MATRIX * vec4(VERTEX, 1.0);
+	worldPos.xyz += getWind(WORLD_MATRIX, VERTEX, TIME);
 	VERTEX = (INV_CAMERA_MATRIX * worldPos).xyz;
 	NORMAL = (MODELVIEW_MATRIX * vec4(NORMAL, 0.0)).xyz;
-	UV=UV*uv1_scale.xy+uv1_offset.xy;
+	UV = UV * uv1_scale.xy + uv1_offset.xy;
 }
 
 void fragment() {
 	vec2 base_uv = UV;
-	vec4 albedo_tex = texture(texture_albedo,base_uv);
+	vec4 albedo_tex = texture(texture_albedo, base_uv);
 	ALBEDO = albedo.rgb * albedo_tex.rgb;
-	float metallic_tex = dot(texture(texture_metallic,base_uv),metallic_texture_channel);
+	float metallic_tex = dot(texture(texture_metallic,base_uv), metallic_texture_channel);
 	METALLIC = metallic_tex * metallic;
-	float roughness_tex = dot(texture(texture_roughness,base_uv),roughness_texture_channel);
+	float roughness_tex = dot(texture(texture_roughness,base_uv), roughness_texture_channel);
 	ROUGHNESS = roughness_tex * roughness;
 	SPECULAR = specular;
 	ALPHA = albedo.a * albedo_tex.a;
