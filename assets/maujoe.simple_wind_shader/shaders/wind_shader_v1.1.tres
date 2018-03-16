@@ -15,10 +15,6 @@ uniform sampler2D texture_metallic : hint_white;
 uniform vec4 metallic_texture_channel;
 uniform sampler2D texture_roughness : hint_white;
 uniform vec4 roughness_texture_channel;
-uniform vec3 uv1_scale;
-uniform vec3 uv1_offset;
-uniform vec3 uv2_scale;
-uniform vec3 uv2_offset;
 
 // Wind settings.
 uniform float speed = 1.0;
@@ -26,10 +22,15 @@ uniform float minStrength : hint_range(0.0, 1.0);
 uniform float maxStrength : hint_range(0.0, 1.0);
 uniform float interval = 0.75;
 uniform float detail = 1.0;
-uniform float distortion;
+uniform float distortion : hint_range(0.0, 1.0);
 uniform vec2 direction = vec2(1.0, 0.0);
 uniform float heightOffset = 0.0;
 
+// UV Uniforms must be after other uniforms because there is a bug with vec3. 
+uniform vec3 uv1_scale;
+uniform vec3 uv1_offset;
+uniform vec3 uv2_scale;
+uniform vec3 uv2_offset;
 
 vec3 getWind(mat4 worldMatrix, vec3 vertex, float timer){
 	vec4 pos = worldMatrix * mix(vec4(1.0), vec4(vertex, 1.0), distortion);
