@@ -20,7 +20,7 @@ uniform vec4 roughness_texture_channel;
 uniform float speed = 1.0;
 uniform float minStrength : hint_range(0.0, 1.0);
 uniform float maxStrength : hint_range(0.0, 1.0);
-uniform float interval = 0.75;
+uniform float interval = 3.5;
 uniform float detail = 1.0;
 uniform float distortion : hint_range(0.0, 1.0);
 uniform vec2 direction = vec2(1.0, 0.0);
@@ -36,7 +36,7 @@ vec3 getWind(mat4 worldMatrix, vec3 vertex, float timer){
 	vec4 pos = worldMatrix * mix(vec4(1.0), vec4(vertex, 1.0), distortion);
 	float time = timer * speed + pos.x + pos.z;
 	float diff = pow(maxStrength - minStrength, 2);
-	float strength = clamp(minStrength + diff + sin(time * (1.0 - interval)) * diff, minStrength, maxStrength);
+	float strength = clamp(minStrength + diff + sin(time / interval) * diff, minStrength, maxStrength);
 	float wind = (sin(time) + cos(time * detail)) * strength * max(0.0, vertex.y - heightOffset);
 	vec2 dir = normalize(direction);
 	
