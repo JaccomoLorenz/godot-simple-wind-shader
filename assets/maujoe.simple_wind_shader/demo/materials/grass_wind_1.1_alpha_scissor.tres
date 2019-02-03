@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=2]
 
-[ext_resource path="res://assets/maujoe.simple_wind_shader/shaders/wind_shader_v1.1.tres" type="Shader" id=1]
+[ext_resource path="res://assets/maujoe.simple_wind_shader/shaders/wind_shader_v1.1_alpha_scissor.tres" type="Shader" id=1]
 [ext_resource path="res://assets/maujoe.simple_wind_shader/demo/textures/grass.png" type="Texture" id=2]
 
 [resource]
@@ -11,6 +11,7 @@ shader_param/albedo = Color( 1, 1, 1, 1 )
 shader_param/specular = 0.0
 shader_param/metallic = 0.0
 shader_param/roughness = 1.0
+shader_param/alpha_scissor_threshold = 0.15
 shader_param/point_size = 1.0
 shader_param/metallic_texture_channel = Plane( 1, 0, 0, 0 )
 shader_param/roughness_texture_channel = Plane( 1, 0, 0, 0 )
